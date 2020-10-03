@@ -1,0 +1,140 @@
+﻿@*@model IEnumerable<CSSMVC.Models.Product>*@ 
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<html>
+<head>
+    <style>
+        *{
+            box-sizing:border-box;
+        }
+        body{
+            
+        }
+        .header{
+            text-align:center;
+            padding:40px;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 5px;
+        }
+        .column{
+            flex:25%;
+            max-width:25%;
+            padding:0 5px;
+        }
+        .column img{
+            margin-top:6px;
+            vertical-align:middle;
+            width:100%;
+        }
+        @@media screen and (max-width:800px)
+        {
+            .column{
+                flex:50%;
+                max-width:100%;
+            }
+        }
+        @@media screen and (max-width:600px) {
+            .column {
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Flexbox İle Fotoğraf Galerisi</h1>
+        <p>Flexbox Özelliği</p>
+    </div>
+    <div class="row">
+        <div class="column">
+            <img src="~/img/Resimler/1.jpg" />
+            <img src="~/img/Resimler/10.jpg" />
+            <img src="~/img/Resimler/11.jpg" />
+            <img src="~/img/Resimler/5.jpg" />
+            <img src="~/img/Resimler/9.jpg" />
+            <img src="~/img/Resimler/12.jpg" />
+        </div>
+        <div class="column">
+            <img src="~/img/Resimler/2.jpg" />
+            <img src="~/img/Resimler/14.jpg" />
+            <img src="~/img/Resimler/15.jpg" />
+            <img src="~/img/Resimler/11.jpg" />
+            <img src="~/img/Resimler/13.jpg" />
+            <img src="~/img/Resimler/10.jpg" />
+        </div>
+        <div class="column">
+            <img src="~/img/Resimler/3.jpg" />
+            <img src="~/img/Resimler/5.jpg" />
+            <img src="~/img/Resimler/6.jpg" />
+            <img src="~/img/Resimler/1.jpg" />
+            <img src="~/img/Resimler/15.jpg" />
+            <img src="~/img/Resimler/7.jpg" />
+        </div>
+        <div class="column">
+            <img src="~/img/Resimler/4.jpg" />
+            <img src="~/img/Resimler/8.jpg" />
+            <img src="~/img/Resimler/9.jpg" />
+            <img src="~/img/Resimler/6.jpg" />
+            <img src="~/img/Resimler/12.jpg" />
+            <img src="~/img/Resimler/10.jpg" />
+        </div>
+    </div>
+    @*<div class="row">
+        <h>@ViewBag.Test</h>
+        <h>@ViewBag.Toplam</h>
+    </div>
+    @foreach (var item in Model)
+    {
+        <div class="card">
+            <img src="~/img/Resimler/@item.Quantity" alt="Denim Jeans" style="width:100%">
+            <h1>@item.Name</h1>
+            <p class="price">@item.Price</p>
+            <p>Güzel Ürün</p>
+            <p><button>Add to Cart</button></p>
+        </div>
+    }*@
+
+
+
+
+</body>
+</html>
+
+<style>
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+    }
+
+    .price {
+        color: grey;
+        font-size: 22px;
+    }
+
+    .card button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+    }
+
+        .card button:hover {
+            opacity: 0.7;
+        }
+</style>
